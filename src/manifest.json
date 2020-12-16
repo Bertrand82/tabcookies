@@ -1,0 +1,39 @@
+{
+    "name": "gdeCookies",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Chrome Cookie Interceptor",
+    "homepage_url": "http://wwww.bg.fr",
+    "background": {
+        "scripts": [
+            "common.js",
+            "background.js"
+        ],
+		"persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "inject.js",
+        "common.js"
+    ],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://*.googleapis.com https://gitcdn.link https://cdnjs.cloudflare.com; object-src 'self'",
+ 
+    "permissions": [
+        "contentSettings",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/*",
+		"storage", 
+		"http://*/", 
+		"https://*/", 
+		"tabs"
+    ]
+
+
+}
