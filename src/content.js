@@ -6,6 +6,4 @@ var injectJs = function(fileName) {
     headElement.insertBefore(s, headElement.firstElementChild);
 };
 
-injectJs("common.js");
-injectJs("inject.js");
 injectJs("injectdiv.js");

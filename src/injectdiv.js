@@ -7,7 +7,7 @@
 	div.style.top = 0;
 	div.style.right = 0;
 	div.style.color = 'red';
-	div.textContent = 'Injected ';
+	div.textContent = 'Cookies Tab Management ';
 	
 	if (document.body){
 		document.body.appendChild(div);
