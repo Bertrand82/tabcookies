@@ -8,7 +8,7 @@ var processCookyBeforeSend= function(cookiesStr,id) {
     var listCookies = [];
     cookieStrList.forEach(function(cookieStr){
         if (cookieStr.indexOf(prefix)==0) {
-            newStrList.push(cookieStr.substring(prefix.length, cookieStr.length));
+            listCookies.push(cookieStr.substring(prefix.length, cookieStr.length));
         }
     });
     return listCookies.join("; ");

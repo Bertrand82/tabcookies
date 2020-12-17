@@ -8,3 +8,4 @@ var injectJs = function(fileName) {
 
 injectJs("common.js");
 injectJs("inject.js");
+injectJs("injectdiv.js");
