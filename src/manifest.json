@@ -2,7 +2,7 @@
     "name": "BgTabCookies",
     "version": "0.1",
     "manifest_version": 2,
-    "description": "Chrome Cookie Interceptor",
+    "description": "Chrome Cookie Managed By Tab",
     "homepage_url": "http://wwww.bg.fr",
     "background": {
         "scripts": [
@@ -19,9 +19,7 @@
         }
     ],
     "web_accessible_resources": [
-        "inject.js",
-        "common.js",
-		"injectdiv.js"
+       "injectdiv.js"
     ],
 	"content_security_policy": "script-src 'self' 'unsafe-eval' https://*.googleapis.com https://gitcdn.link https://cdnjs.cloudflare.com; object-src 'self'",
  

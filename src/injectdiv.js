@@ -1,17 +1,15 @@
 (function() {
-	console.log("bg injectdiv start ");
 	
-	// just place a div at top right
+	// creation d'un element
 	var div = document.createElement('div');
 	div.style.position = 'fixed';
 	div.style.top = 0;
 	div.style.right = 0;
 	div.style.color = 'red';
-	div.textContent = 'Cookies Tab Management ';
+	div.textContent = ' Cookies Tab Managed ';
 	
 	if (document.body){
 		document.body.appendChild(div);
 	}
-	console.log("injectdiv done");
 	
 })();
