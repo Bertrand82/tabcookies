@@ -1,0 +1,1 @@
+Web application destinée à faciliter les tests du  plugin

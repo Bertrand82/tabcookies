@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Home page</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       
+    </head>
+    <body>
+    	<div id="cooks" style="border:1px solid red;">
+    	cookies from chrome
+    	</div>
+        <p>
+        <span th:text="'time:  ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}" th:remove="tag"></span>
+        </p>
+        <p>  beanSession <span th:text="${beanSession}" th:remove="tag"></span></p>
+        <p>  beanSession <span th:text="${isOk}" th:remove="tag"></span></p>
+       <p>  <span th:text="${message1}" th:remove="tag"></span></p>
+        <p>  <span th:text="${message2}" th:remove="tag"></span></p>
+       <p>  <span th:text="${message3}" th:remove="tag"></span></p>
+    <a href="/bg2">Reload</a>
+    </body>
+     <script>
+        function listCookies() {
+        	
+        	
+            var theCookies = document.cookie.split(';');
+            console.log("listCookies start theCookies: ",theCookies);
+            for (var i =0 ; i <  theCookies.length; i++) {            	
+            	var aString = i + ' -  ' + theCookies[i] + "";
+            	console.log("listCookies loop "+i,aString);
+                const div = document.createElement('div');
+                div.style.color = 'green';
+                div.textContent = ' '+ aString;
+                document.getElementById('cooks').appendChild(div);
+            }
+           
+        };
+        listCookies();
+        </script>
+</html>
