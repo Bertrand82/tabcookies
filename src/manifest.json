@@ -13,13 +13,15 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
+            "matches": ["<all_urls>"],
             "js": ["content.js"],
             "run_at": "document_start"
         }
     ],
     "web_accessible_resources": [
-       "injectdiv.js"
+       "injectdiv.js",
+	   "common.js",
+	   "injectScript.js"
     ],
 	"content_security_policy": "script-src 'self' 'unsafe-eval' https://*.googleapis.com https://gitcdn.link https://cdnjs.cloudflare.com; object-src 'self'",
  
@@ -32,9 +34,15 @@
 		"storage", 
 		"http://*/", 
 		"https://*/", 
-		"tabs"
+		"tabs",
+		"activeTab"
 		
-    ]
+    ],
+	"externally_connectable": {	
+		"ids":["nkgkijongoabaabpdblffcdcphnhebho"],
+		"matches": ["*://*.google.com/*","http://localhost:8080/*"]
+	}
+	
 
 
 }

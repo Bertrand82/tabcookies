@@ -4,7 +4,9 @@ Une  extension Chrome qui intercepte les cookies.
 
 Le but est de pouvoir gérer "manuellement" les cookies de 2 "tab" sur la même url (étanchéité des sesssions).
 
-TODO: 
+Les cookies sont utilisé de 2 façons: 
+	Lors de l'envoie d'une requete vers le serveur: Ils sont traités alors dans background.js par du code s'executant dans l'extansion. 
+	A l'interieur de la page: IL sont traités par un script de surcharge dans la page.
 
 A terme , certains cookies (les cookies liés à l'identification) devront  être partagés et d'autres (jsessionid) ne devront pas être partagés.
 
@@ -24,5 +26,11 @@ http://blob.tomerweller.com/cookie-interception-chrome-extension
 Cycle de vie d'une requête
 https://developer.chrome.com/docs/extensions/reference/webRequest/#life_cycle_footnote
 
+Sending messages from web page to extension
+https://developer.chrome.com/docs/extensions/mv2/messaging/#external-webpage
+
 Liste d'exemples 
 https://developers.chrome.com/extensions/samples
+
+Voir ausi cookieStoreId
+string. Le magasin de cookies de l'onglet. Si différents onglets peuvent avoir différents magasins de cookies (par exemple, pour prendre en charge l'identitié contextuelle), vous pouvez passer cette option storeId dans différentes méthodes de l'API cookies, pour définir et obtenir des cookies associés à Le magasin de cookies de cet onglet. Seulement présent si l'extension a la permission "cookies".

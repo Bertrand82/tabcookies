@@ -1,5 +1,5 @@
 var getPrefix = function(id) {
-    return "$GDE$"+id;
+    return "_TAB_"+id+"_";
 };
  
 var processCookyBeforeSend= function(cookiesStr,id) {
@@ -8,7 +8,10 @@ var processCookyBeforeSend= function(cookiesStr,id) {
     var listCookies = [];
     cookieStrList.forEach(function(cookieStr){
         if (cookieStr.indexOf(prefix)==0) {
-            listCookies.push(cookieStr.substring(prefix.length, cookieStr.length));
+            var newCookie = cookieStr.substring(prefix.length, cookieStr.length);
+            listCookies.push(newCookie);
+            console.log("cookieStr:" + cookieStr);
+            console.log("newCookie:" + newCookie);
         }
     });
     return listCookies.join("; ");
