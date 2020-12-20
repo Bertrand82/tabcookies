@@ -40,7 +40,7 @@
     ],
 	"externally_connectable": {	
 		"ids":["nkgkijongoabaabpdblffcdcphnhebho"],
-		"matches": ["*://*.google.com/*","http://localhost:8080/*"]
+		"matches": ["*://*.lemonde.fr/*","*://*.google.com/*","http://localhost:8080/*","https://localhost:8443/"]
 	}
 	
 

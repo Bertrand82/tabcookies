@@ -13,7 +13,8 @@ A terme , certains cookies (les cookies liés à l'identification) devront  êtr
 Une option sur la page devrait être "injecté" pour pouvoir activer ou deactiver pour un tab ce comportement
 En attendant, une liste des tabs pourraient être affiché avec un bouton on/off
 
-
+Pour tester l'extension, une application spring boot avec les sécurités "normales" a été developpée (Basic authentification et csrf).
+L'extension marche bien sur les pages de test mais pas sur les sites https de google, facebook etc...
 
 
 
@@ -32,5 +33,5 @@ https://developer.chrome.com/docs/extensions/mv2/messaging/#external-webpage
 Liste d'exemples 
 https://developers.chrome.com/extensions/samples
 
-Voir ausi cookieStoreId
-string. Le magasin de cookies de l'onglet. Si différents onglets peuvent avoir différents magasins de cookies (par exemple, pour prendre en charge l'identitié contextuelle), vous pouvez passer cette option storeId dans différentes méthodes de l'API cookies, pour définir et obtenir des cookies associés à Le magasin de cookies de cet onglet. Seulement présent si l'extension a la permission "cookies".
+Voir ausi pour firefox : cookieStoreId
+ Le magasin de cookies de l'onglet. Si différents onglets peuvent avoir différents magasins de cookies (par exemple, pour prendre en charge l'identitié contextuelle), vous pouvez passer cette option storeId dans différentes méthodes de l'API cookies, pour définir et obtenir des cookies associés à Le magasin de cookies de cet onglet. Seulement présent si l'extension a la permission "cookies".

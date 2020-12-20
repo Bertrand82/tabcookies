@@ -53,7 +53,10 @@ chrome.webRequest.onHeadersReceived.addListener(
     urls: ["*://*/*"]
 }, ['blocking', 'responseHeaders', 'extraHeaders']
 );
-
+/*
+Decomment this code if page are using cookies . It try to override set and get cookies function 
+*/
+/*
 chrome.webRequest.onHeadersReceived.addListener(
     function (details) {
         console.log("bg72 oncompleted start 1 details.tabId : " + details.tabId);
@@ -72,10 +75,11 @@ chrome.webRequest.onHeadersReceived.addListener(
 
     },
     {
-        urls: ["*://*/*"]
+        urls: [<all_urls>]
     },
     ['responseHeaders']
 );
+*/
 
 
 
